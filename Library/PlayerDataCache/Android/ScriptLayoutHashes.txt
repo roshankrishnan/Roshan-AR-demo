@@ -2,6 +2,7 @@ Android
 PlayerPath?
 F:/Roshan-AR-demo/Builds/test.apk
 SceneListBegin?
+Assets/Scenes/SplashScene.unity
 Assets/Scenes/ARScene.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -121,10 +122,11 @@ e8733e39efa851172df1c9eaef062265 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoun
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARFace
 1268406d3f2e4b2c2b670b560b6db769 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.AREnvironmentProbeManager
-f766b2311dcd35e77ba6528617b3ceae Assembly-CSharp.dll:.FurnitureController
+ebc2cd27710b1122e9c43ce2af64e8d4 Assembly-CSharp.dll:.FurnitureController
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer
 ef705ae677d649d6c0ff3b4060963abd Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARTrackedObjectManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+670fdba366370980e84b131d6651d4ec Assembly-CSharp.dll:.SplashController
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPointCloud
@@ -186,4 +188,3 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 a6ad38b2df96664da5c2dca09e4be952 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARHumanBodyManager
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.AREnvironmentProbe
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-d970cd8ca55e4654423894abd569c511 Assembly-CSharp.dll:.SplashController

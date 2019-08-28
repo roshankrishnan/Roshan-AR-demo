@@ -18,4 +18,10 @@ public class Constants : MonoBehaviour
     public const float MIN_SWIPE_DISTANCE = 0.17f;
     public const float MAX_SWIPE_TIME = 0.5f;
 
+    //UI
+    public const string KING = "kingSized";
+    public const string QUEEN = "queenSized";
+    public const string DOUBLE = "doubleSized";
+    public const string TWIN = "twinSized";
+
 }

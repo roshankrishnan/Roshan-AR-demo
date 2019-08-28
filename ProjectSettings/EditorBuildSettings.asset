@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/SplashScene.unity
+    guid: 72c4a394bb4c6fb4f935c78fdd4debaa
+  - enabled: 1
+    path: Assets/Scenes/ARScene.unity
+    guid: 0d3f9636a7bf44a4691227776503b769
   m_configObjects: {}

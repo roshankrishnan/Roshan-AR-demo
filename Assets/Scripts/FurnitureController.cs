@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems; 
 using System;
@@ -9,10 +10,17 @@ public class FurnitureController : MonoBehaviour {
 
 	private ARRaycastManager arRaycastManager;
 	private static List<ARRaycastHit> hits;
+
 	public GameObject furniturePrefab;
     private GameObject furnitureSpawn;
     public GameObject configurationsObject;
     public GameObject arReminder;
+
+    public Button kingButton;
+    public Button queenButton;
+    public Button twinButton;
+    public Button doubleButton;
+
     private bool isSpawned = false;
 
     private float holdTime = 0f;
@@ -23,6 +31,11 @@ public class FurnitureController : MonoBehaviour {
     	arRaycastManager = GetComponent<ARRaycastManager>();
     	hits = new List<ARRaycastHit>();
         configurationsObject.SetActive(false);
+
+        kingButton.onClick.AddListener(() => OnConfigClicked(Constants.KING));
+        queenButton.onClick.AddListener(() => OnConfigClicked(Constants.QUEEN));
+        twinButton.onClick.AddListener(() => OnConfigClicked(Constants.TWIN));
+        doubleButton.onClick.AddListener(() => OnConfigClicked(Constants.DOUBLE));
     }
 
     void Update() {
@@ -90,29 +103,25 @@ public class FurnitureController : MonoBehaviour {
         }
     }
 
-    public void OnClickKing() {
-        furnitureSpawn.transform.localScale = new Vector3(Constants.KING_BED_WIDTH,
-            furnitureSpawn.transform.localScale.y, Constants.LARGE_BED_LENGTH);
+    void OnConfigClicked(string sizeType) {
         configurationsObject.SetActive(false);
+        switch (sizeType) {
+            case Constants.KING:
+                furnitureSpawn.transform.localScale = new Vector3(Constants.KING_BED_WIDTH,
+                    furnitureSpawn.transform.localScale.y, Constants.LARGE_BED_LENGTH);
+                break;
+            case Constants.QUEEN:
+                furnitureSpawn.transform.localScale = new Vector3(Constants.QUEEN_BED_WIDTH,
+                    furnitureSpawn.transform.localScale.y, Constants.LARGE_BED_LENGTH);
+                break;
+            case Constants.DOUBLE:
+                furnitureSpawn.transform.localScale = new Vector3(Constants.DOUBLE_BED_WIDTH,
+                    furnitureSpawn.transform.localScale.y, Constants.SMALL_BED_LENGTH);
+                break;
+            case Constants.TWIN:
+                furnitureSpawn.transform.localScale = new Vector3(Constants.TWIN_BED_WIDTH,
+                    furnitureSpawn.transform.localScale.y, Constants.SMALL_BED_LENGTH);
+                break;
+        }
     }
-
-     public void OnClickQueen() {
-        furnitureSpawn.transform.localScale = new Vector3(Constants.QUEEN_BED_WIDTH,
-            furnitureSpawn.transform.localScale.y, Constants.LARGE_BED_LENGTH);
-        configurationsObject.SetActive(false);
-    }
-
-     public void OnClickDouble() {
-        furnitureSpawn.transform.localScale = new Vector3(Constants.DOUBLE_BED_WIDTH,
-            furnitureSpawn.transform.localScale.y, Constants.SMALL_BED_LENGTH);
-        configurationsObject.SetActive(false);
-    }
-
-     public void OnClickTwin() {
-        furnitureSpawn.transform.localScale = new Vector3(Constants.TWIN_BED_WIDTH,
-            furnitureSpawn.transform.localScale.y, Constants.SMALL_BED_LENGTH);
-        configurationsObject.SetActive(false);
-    }
-
-
 }

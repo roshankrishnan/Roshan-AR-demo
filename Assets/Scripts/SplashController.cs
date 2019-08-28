@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SplashController : MonoBehaviour {
 
+	public Button startButton;
 	public GameObject helpObject;
+
     void Start() {
         helpObject.SetActive(false);
+        startButton.onClick.AddListener(() => OnStartClicked());
     }
 
     // Update is called once per frame
@@ -21,7 +25,9 @@ public class SplashController : MonoBehaviour {
     	helpObject.SetActive(true);
     }
 
-    public void OnClickBegin() {
+    public void OnStartClicked() {
+    	SceneManager.UnloadSceneAsync("SplashScene");
     	SceneManager.LoadScene("ARScene");
     }
+ 
 }
